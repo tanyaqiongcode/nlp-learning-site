@@ -1,7 +1,7 @@
 # 🗺️ 文科生学 NLP · 从零基础到应用精通的学习地图
 
-[![CI](https://github.com/tanyaqiong31029/nlp-learning-site/actions/workflows/ci.yml/badge.svg)](https://github.com/tanyaqiong31029/nlp-learning-site/actions/workflows/ci.yml)
-[![Live Demo](https://img.shields.io/badge/在线访问-GitHub_Pages-0B7F72)](https://tanyaqiong31029.github.io/nlp-learning-site/)
+[![CI](https://github.com/tanyaqiongcode/nlp-learning-site/actions/workflows/ci.yml/badge.svg)](https://github.com/tanyaqiongcode/nlp-learning-site/actions/workflows/ci.yml)
+[![Live Demo](https://img.shields.io/badge/在线访问-GitHub_Pages-0B7F72)](https://tanyaqiongcode.github.io/nlp-learning-site/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![数据更新](https://img.shields.io/badge/数据-每日自动核验-FF8A3D)](.github/workflows/update-data.yml)
 
@@ -11,7 +11,7 @@
 
 ![网站截图](docs/screenshot.png)
 
-> 🔗 **在线访问**：<https://tanyaqiong31029.github.io/nlp-learning-site/>
+> 🔗 **在线访问**：<https://tanyaqiongcode.github.io/nlp-learning-site/>
 >
 > 纯静态、零运行时依赖，MIT 许可证——也可以直接下载后双击 `index.html` 在本地使用。
 
@@ -43,12 +43,12 @@
 
 **方式一：在线访问（推荐）**
 
-直接打开 <https://tanyaqiong31029.github.io/nlp-learning-site/>
+直接打开 <https://tanyaqiongcode.github.io/nlp-learning-site/>
 
 **方式二：本地直接打开**
 
 ```bash
-git clone https://github.com/tanyaqiong31029/nlp-learning-site.git
+git clone https://github.com/tanyaqiongcode/nlp-learning-site.git
 ```
 
 然后双击打开其中的 `index.html` 即可（学习进度等全部功能均可用）。
@@ -56,7 +56,7 @@ git clone https://github.com/tanyaqiong31029/nlp-learning-site.git
 **方式三：本地服务器（体验最佳）**
 
 ```bash
-git clone https://github.com/tanyaqiong31029/nlp-learning-site.git
+git clone https://github.com/tanyaqiongcode/nlp-learning-site.git
 cd nlp-learning-site
 python3 -m http.server 8000
 # 浏览器访问 http://localhost:8000
@@ -64,10 +64,10 @@ python3 -m http.server 8000
 
 ## 📖 使用方法
 
-1. **先看[路线图](https://tanyaqiong31029.github.io/nlp-learning-site/#/roadmap)**，选好路径（多数人选应用向）；
+1. **先看[路线图](https://tanyaqiongcode.github.io/nlp-learning-site/#/roadmap)**，选好路径（多数人选应用向）；
 2. **数学和 Python 交替推进**，每学完一块点击旁边的「标记已掌握」记录进度；
-3. 学到第 3 个月左右，去[实操项目区](https://tanyaqiong31029.github.io/nlp-learning-site/#/projects)**换上自己的语料**做实验——五个实验在浏览器里就能跑；
-4. 需要找工具、语料或进阶资源时，查[资源知识库](https://tanyaqiong31029.github.io/nlp-learning-site/#/kb)；想了解领域风向，看[前沿动态](https://tanyaqiong31029.github.io/nlp-learning-site/#/frontier)。
+3. 学到第 3 个月左右，去[实操项目区](https://tanyaqiongcode.github.io/nlp-learning-site/#/projects)**换上自己的语料**做实验——五个实验在浏览器里就能跑；
+4. 需要找工具、语料或进阶资源时，查[资源知识库](https://tanyaqiongcode.github.io/nlp-learning-site/#/kb)；想了解领域风向，看[前沿动态](https://tanyaqiongcode.github.io/nlp-learning-site/#/frontier)。
 
 > 💡 页面基于 hash 路由（`#/roadmap`、`#/kb`……），可直接收藏某一页的链接。
 
