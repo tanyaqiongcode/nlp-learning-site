@@ -139,4 +139,4 @@ CI（`ci.yml`）在每次推送 / PR 时自动运行以上全部检查 + 冒烟�
 
 ## 📄 License
 
-[MIT](LICENSE) © 2026 tanyaqiong31029
+[MIT](LICENSE) © 2026 tanyaqiongcode
