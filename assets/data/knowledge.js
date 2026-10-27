@@ -24,7 +24,7 @@ window.KB = {
         {
           name: "MCP Servers 合集",
           repo: "modelcontextprotocol/servers",
-          stars: 91592, pushed: "2026-10",
+          stars: 91593, pushed: "2026-10",
           desc: "Model Context Protocol 官方服务器合集：给大模型接文件、数据库、网页等工具的标准方式。",
           why: "MCP 是 2026 年事实上的「模型连工具」标准协议（91k 星的生态规模）。想让自己的研究助手读写本地语料、调用检索，从这里的现成 Server 挑一个接上就行。",
           tags: ["免费", "官方协议", "Agent", "生态核心"],
@@ -200,7 +200,7 @@ window.KB = {
         {
           name: "Awesome Python",
           repo: "vinta/awesome-python",
-          stars: 330476, pushed: "2026-10",
+          stars: 330478, pushed: "2026-10",
           desc: "「我想用 Python 做 X，该用哪个库」的权威答案库。",
           why: "按用途分类的库索引（文本处理、数据、爬虫……），当你需要新工具时先来这里查，避免在搜索引擎里踩坑。",
           tags: ["免费", "资源索引", "常备手册"],
@@ -208,7 +208,7 @@ window.KB = {
         {
           name: "Project-based Learning",
           repo: "practical-tutorials/project-based-learning",
-          stars: 288114, pushed: "2026-10",
+          stars: 288116, pushed: "2026-10",
           desc: "按项目组织的编程教程汇编，覆盖 Python 等多种语言。",
           why: "语法过关后最好的下一步：挑一个贴近自己研究的小项目照着做完，比再读十本书都有用。",
           tags: ["免费", "项目式学习"],

@@ -33,15 +33,15 @@ window.FRONTIER = {
     },
     {
       date: "2026-10-26",
-      repo: "openai/openai-cookbook",
-      label: "自动核验",
-      text: "OpenAI 官方的 API 使用示例与实操指南合集。GitHub API 每日核验：最近推送 2026-10-26，当前星标 76.8k。",
-    },
-    {
-      date: "2026-10-26",
       repo: "stanfordnlp/dspy",
       label: "自动核验",
       text: "斯坦福出品：把提示词工程变成「编程 + 自动优化」，用指标驱动地改进 LLM 流水线。GitHub API 每日核验：最近推送 2026-10-26，当前星标 38.8k。",
+    },
+    {
+      date: "2026-10-26",
+      repo: "openai/openai-cookbook",
+      label: "自动核验",
+      text: "OpenAI 官方的 API 使用示例与实操指南合集。GitHub API 每日核验：最近推送 2026-10-26，当前星标 76.8k。",
     },
     {
       date: "2026-10-26",
