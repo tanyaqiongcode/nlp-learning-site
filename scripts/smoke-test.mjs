@@ -6,6 +6,13 @@
  * 覆盖：路由导航 / 知识库搜索 / 五个在线实验（含非中文与 HTML 输入）/ 进度持久化（含损坏存储）/ 页面 JS 错误。
  */
 import { chromium } from "playwright";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+
+// 知识库预期条目数从数据源动态取值，避免每次补充资源都改断言
+const kbRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
+const KB_EXPECTED = (readFileSync(join(kbRoot, "assets/data/knowledge.js"), "utf8").match(/repo:\s*"/g) || []).length;
 
 const base = process.argv[2] || "http://localhost:8000";
 const failures = [];
@@ -50,7 +57,7 @@ check("NLP 概念卡 19 张", await page.locator('#page-nlp .check-btn[data-modu
 await page.evaluate(() => { location.hash = "#/kb"; });
 await page.waitForTimeout(300);
 const kbCards = await page.locator(".kb-card").count();
-check("知识库 43 张卡", kbCards === 43, `实际 ${kbCards}`);
+check(`知识库 ${KB_EXPECTED} 张卡`, kbCards === KB_EXPECTED, `实际 ${kbCards}`);
 check("分类筛选 10 个", await page.locator(".chip-btn").count() === 10);
 await page.evaluate(() => {
   const s = document.querySelector("#kbSearch");
