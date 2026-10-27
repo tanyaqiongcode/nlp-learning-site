@@ -9,81 +9,81 @@
       （12 小时缓存，离线/限流时回落到 fallback 数据，fallback 由脚本每日更新）。
    ============================================================ */
 window.FRONTIER = {
-  updated: "2026-10-24",
+  updated: "2026-10-27",
 
   // ---- 近期动态（最新在前）----
   picks: [
     {
-      date: "2026-10-24",
-      repo: "microsoft/generative-ai-for-beginners",
+      date: "2026-10-27",
+      repo: "openai/openai-agents-python",
       label: "自动核验",
-      text: "微软官方 21 课生成式 AI 入门，从原理讲到应用与伦理。GitHub API 每日核验：最近推送 2026-10-24，当前星标 122k。",
+      text: "OpenAI 官方多智能体框架：用几行代码编排带工具、交接与守卫的智能体工作流。GitHub API 每日核验：最近推送 2026-10-27，当前星标 30.3k。",
     },
     {
-      date: "2026-10-24",
+      date: "2026-10-27",
       repo: "huggingface/transformers",
       label: "自动核验",
-      text: "Hugging Face 旗舰库：数千个预训练模型的一站式下载与使用入口。GitHub API 每日核验：最近推送 2026-10-24，当前星标 168.1k。",
+      text: "Hugging Face 旗舰库：数千个预训练模型的一站式下载与使用入口。GitHub API 每日核验：最近推送 2026-10-27，当前星标 168.2k。",
     },
     {
-      date: "2026-10-24",
-      repo: "nltk/nltk",
-      label: "自动核验",
-      text: "最经典的「为语言学家写的」NLP Python 库。GitHub API 每日核验：最近推送 2026-10-24，当前星标 14.8k。",
-    },
-    {
-      date: "2026-10-23",
-      repo: "openai/openai-cookbook",
-      label: "自动核验",
-      text: "OpenAI 官方的 API 使用示例与实操指南合集。GitHub API 每日核验：最近推送 2026-10-23，当前星标 76.8k。",
-    },
-    {
-      date: "2026-10-23",
-      repo: "stanfordnlp/stanza",
-      label: "自动核验",
-      text: "斯坦福官方多语言 NLP 工具包，支持 70+ 种语言。GitHub API 每日核验：最近推送 2026-10-23，当前星标 7.9k。",
-    },
-    {
-      date: "2026-10-23",
+      date: "2026-10-27",
       repo: "explosion/spaCy",
       label: "自动核验",
-      text: "工业级自然语言处理库，速度与精度兼备。GitHub API 每日核验：最近推送 2026-10-23，当前星标 34k。",
+      text: "工业级自然语言处理库，速度与精度兼备。GitHub API 每日核验：最近推送 2026-10-27，当前星标 34k。",
     },
     {
-      date: "2026-10-23",
-      repo: "maehr/awesome-digital-history",
+      date: "2026-10-26",
+      repo: "openai/openai-cookbook",
       label: "自动核验",
-      text: "数字史学的史料库与学习方法索引。GitHub API 每日核验：最近推送 2026-10-23，当前星标 361。",
+      text: "OpenAI 官方的 API 使用示例与实操指南合集。GitHub API 每日核验：最近推送 2026-10-26，当前星标 76.8k。",
     },
     {
-      date: "2026-10-22",
+      date: "2026-10-26",
+      repo: "stanfordnlp/dspy",
+      label: "自动核验",
+      text: "斯坦福出品：把提示词工程变成「编程 + 自动优化」，用指标驱动地改进 LLM 流水线。GitHub API 每日核验：最近推送 2026-10-26，当前星标 38.8k。",
+    },
+    {
+      date: "2026-10-26",
       repo: "vinta/awesome-python",
       label: "自动核验",
-      text: "「我想用 Python 做 X，该用哪个库」的权威答案库。GitHub API 每日核验：最近推送 2026-10-22，当前星标 329.8k。",
+      text: "「我想用 Python 做 X，该用哪个库」的权威答案库。GitHub API 每日核验：最近推送 2026-10-26，当前星标 330.5k。",
     },
     {
-      date: "2026-10-22",
-      repo: "programminghistorian/jekyll",
+      date: "2026-10-26",
+      repo: "practical-tutorials/project-based-learning",
       label: "自动核验",
-      text: "人文学者写给同行的编程教程集（本仓库为站点源码）。GitHub API 每日核验：最近推送 2026-10-22，当前星标 553。",
+      text: "按项目组织的编程教程汇编，覆盖 Python 等多种语言。GitHub API 每日核验：最近推送 2026-10-26，当前星标 288.1k。",
     },
     {
-      date: "2026-10-22",
-      repo: "hankcs/HanLP",
-      label: "自动核验",
-      text: "从分词到句法、摘要、风格转换的中文 NLP 全家桶。GitHub API 每日核验：最近推送 2026-10-22，当前星标 36.5k。",
-    },
-    {
-      date: "2026-10-22",
+      date: "2026-10-26",
       repo: "awesomedata/awesome-public-datasets",
       label: "自动核验",
-      text: "按 25+ 学科整理的高质量公开数据集总表。GitHub API 每日核验：最近推送 2026-10-22，当前星标 79.7k。",
+      text: "按 25+ 学科整理的高质量公开数据集总表。GitHub API 每日核验：最近推送 2026-10-26，当前星标 79.8k。",
     },
     {
-      date: "2026-10-21",
-      repo: "pytorch/tutorials",
+      date: "2026-10-25",
+      repo: "modelcontextprotocol/servers",
       label: "自动核验",
-      text: "PyTorch 官方教程集：从张量入门到分布式训练、部署的全链路。GitHub API 每日核验：最近推送 2026-10-21，当前星标 9.4k。",
+      text: "Model Context Protocol 官方服务器合集：给大模型接文件、数据库、网页等工具的标准方式。GitHub API 每日核验：最近推送 2026-10-25，当前星标 91.6k。",
+    },
+    {
+      date: "2026-10-25",
+      repo: "stanfordnlp/stanza",
+      label: "自动核验",
+      text: "斯坦福官方多语言 NLP 工具包，支持 70+ 种语言。GitHub API 每日核验：最近推送 2026-10-25，当前星标 7.9k。",
+    },
+    {
+      date: "2026-10-25",
+      repo: "labmlai/annotated_deep_learning_paper_implementations",
+      label: "自动核验",
+      text: "60+ 篇深度学习论文的逐行注释实现：Transformer 全家桶、优化器、扩散模型……GitHub API 每日核验：最近推送 2026-10-25，当前星标 67.6k。",
+    },
+    {
+      date: "2026-10-25",
+      repo: "hankcs/HanLP",
+      label: "自动核验",
+      text: "从分词到句法、摘要、风格转换的中文 NLP 全家桶。GitHub API 每日核验：最近推送 2026-10-25，当前星标 36.5k。",
     },
   ],
 
@@ -91,11 +91,12 @@ window.FRONTIER = {
   trends: [
     {
       icon: "🤖",
-      title: "从 Chatbot 到 Agent：NLP 进入「动手」时代",
-      text: "2026 年最大的范式转移：模型不再只是对话，而是调用工具、规划步骤、完成长程任务（Long-Horizon Agents）。对研究者的意义：文献综述助手、批量语料标注、多步翻译流水线都能交给 Agent 编排——提示词写法也从「怎么问」变成「怎么布置任务」。",
+      title: "从 Chatbot 到 Agent：协议标准化已经落地（截至 2026-10 复核）",
+      text: "范式转移仍在深化，且出现了新主线——「协议化」：MCP（模型连工具）与 A2A（智能体连智能体）在 2026 年双双成为 Linux 基金会治理的开放标准，A2A v1.0 已落地、生态规模分别达到 9 万与 2.6 万星。对研究者的意义：文献综述助手、批量语料标注、多步翻译流水线都能用标准协议编排，不再绑死任何一家厂商的工具链。",
       refs: [
-        { label: "Anthropic：构建高效 Agent 的实践指南", url: "https://www.anthropic.com/research/building-effective-agents" },
         { label: "MCP · 模型上下文协议官网", url: "https://modelcontextprotocol.io/" },
+        { label: "A2A 协议官网（中文文档）", url: "https://a2acn.com/docs/introduction" },
+        { label: "OpenAI Agents SDK（官方多智能体框架）", url: "https://github.com/openai/openai-agents-python" },
       ],
     },
     {
@@ -109,11 +110,12 @@ window.FRONTIER = {
     },
     {
       icon: "🛠️",
-      title: "工程化与评测体系比模型本身更受重视",
-      text: "当各家旗舰模型能力接近，竞争转向落地：评测基准（evaluation）、可靠性、成本控制成为关键词。真人盲测竞技场（LMArena）与 LLM-as-a-Judge 正在重塑「模型好不好」的判定方式。对应用向学习者是好消息——「会设计任务、会评估输出质量」正是文科背景最擅长的部分：本站概念页的「评测素养」专题与项目五，就是为这个方向准备的入场券。",
+      title: "评测、安全与模型格局：竞争转向落地（截至 2026-10 复核）",
+      text: "各家旗舰快速迭代（GPT-5.x、Claude Opus 4.x、Gemini 3.x 与开源模型交替领跑），「谁最强」的窗口期越来越短——评测、可靠性、成本控制才是稳定主线。LMArena 盲测与 LLM-as-a-Judge 重塑判定方式之外，OWASP 2026 版把 LLM 安全十大风险（提示注入、数据泄露、幻觉）推成显学。「会设计任务、会评估输出质量」正是文科背景最擅长的部分：本站评测素养专题与项目五就是入场券。",
       refs: [
         { label: "LMArena · 真人盲测竞技场", url: "https://lmarena.ai/" },
-        { label: "Stanford AI Index 年度报告", url: "https://hai.stanford.edu/ai-index" },
+        { label: "OWASP GenAI LLM Top 10 (2026)", url: "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026" },
+        { label: "DSPy · 斯坦福「编程而非提示」框架", url: "https://github.com/stanfordnlp/dspy" },
       ],
     },
     {
@@ -129,15 +131,15 @@ window.FRONTIER = {
   // ---- 实时活跃度看板（自动刷新，无需手工维护）----
   live: {
     repos: [
-      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 168056, pushed: "2026-10-24" } },
-      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 122037, pushed: "2026-10-24" } },
-      { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 107183, pushed: "2026-10-02" } },
-      { repo: "mlabonne/llm-course", name: "LLM Course", fallback: { stars: 84646, pushed: "2026-02-05" } },
-      { repo: "d2l-ai/d2l-zh", name: "动手学深度学习", fallback: { stars: 82056, pushed: "2024-07-30" } },
-      { repo: "chinese-poetry/chinese-poetry", name: "chinese-poetry", fallback: { stars: 53824, pushed: "2026-06-17" } },
-      { repo: "hankcs/HanLP", name: "HanLP", fallback: { stars: 36526, pushed: "2026-10-22" } },
-      { repo: "EleutherAI/lm-evaluation-harness", name: "LM Eval Harness", fallback: { stars: 14305, pushed: "2026-09-14" } },
-      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 33986, pushed: "2026-10-23" } },
+      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 168215, pushed: "2026-10-27" } },
+      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 122220, pushed: "2026-10-24" } },
+      { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 107361, pushed: "2026-10-02" } },
+      { repo: "mlabonne/llm-course", name: "LLM Course", fallback: { stars: 84724, pushed: "2026-02-05" } },
+      { repo: "d2l-ai/d2l-zh", name: "动手学深度学习", fallback: { stars: 82120, pushed: "2024-07-30" } },
+      { repo: "chinese-poetry/chinese-poetry", name: "chinese-poetry", fallback: { stars: 53849, pushed: "2026-06-17" } },
+      { repo: "hankcs/HanLP", name: "HanLP", fallback: { stars: 36530, pushed: "2026-10-25" } },
+      { repo: "EleutherAI/lm-evaluation-harness", name: "LM Eval Harness", fallback: { stars: 14321, pushed: "2026-09-14" } },
+      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 33996, pushed: "2026-10-27" } },
     ],
   },
 
