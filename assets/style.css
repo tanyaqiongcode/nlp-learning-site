@@ -593,3 +593,9 @@ table.simmat { border-collapse: separate; border-spacing: 3px; font-size: .82rem
   .filter-bar { padding: .8rem .9rem; }
   .live-card { padding: .9rem 1rem; }
 }
+
+/* ---------- 备份与保存状态 ---------- */
+.backup-row { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; margin-top: .6rem; }
+.save-status { font-size: .8rem; font-weight: 600; }
+.save-status.save-ok { color: var(--good, #2e9e5b); }
+.save-status.save-warn { color: #c0392b; }

@@ -7,6 +7,7 @@
   "scripts": {
     "lint": "eslint assets scripts && htmlhint index.html",
     "validate": "node scripts/validate-data.mjs",
+    "test:core": "node --test scripts/update-core.test.mjs",
     "links": "node scripts/check-links.mjs",
     "smoke": "node scripts/smoke-test.mjs http://localhost:8000",
     "update-data": "node scripts/update-data.mjs"

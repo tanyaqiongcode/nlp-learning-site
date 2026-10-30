@@ -24,6 +24,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { fmtDate, esc, fmtStars, jsStr, sanitize, computeMaxFail, buildPicks } from "./update-core.mjs";
 
 const DRY = process.argv.slice(2).includes("--dry-run");
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -33,10 +34,6 @@ const frPath = join(root, "assets/data/frontier.js");
 const kb = readFileSync(kbPath, "utf8");
 const fr = readFileSync(frPath, "utf8");
 
-const fmtDate = dt => dt.toISOString().slice(0, 10);
-const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-const fmtStars = n => (n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, "") + "k" : String(n));
-const jsStr = s => s.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
 
 // ---------- 收集需要核验的仓库（知识库全部条目 + 实时看板条目） ----------
 const repos = [...new Set([
@@ -69,16 +66,6 @@ async function fetchRepo(repo) {
   throw lastErr;
 }
 
-// ---------- 数据合法性守卫 ----------
-const DATE_FULL = /^\d{4}-\d{2}-\d{2}$/;
-function sanitize(repo, d) {
-  if (!Number.isInteger(d.stars) || d.stars < 0) return `stars 非法: ${d.stars}`;
-  if (!DATE_FULL.test(d.pushed)) return `pushed 格式非法: "${d.pushed}"`;
-  if (!fmtDate(new Date(d.pushed)).startsWith(d.pushed)) return `pushed 是无效日期: "${d.pushed}"`;
-  if (new Date(d.pushed).getTime() > Date.now() + 36 * 3600 * 1000) return `pushed 是未来日期: "${d.pushed}"`;
-  return null;
-}
-
 const data = {};
 const errors = [];
 const queue = [...repos];
@@ -100,7 +87,7 @@ console.log(`核验完成：${Object.keys(data).length}/${repos.length} 个仓�
 errors.forEach(e => console.warn(`  ⚠ ${e}`));
 
 // 护栏 1：失败比例过高说明 API 异常或数据源有问题，宁可中止也不写入
-const maxFail = Math.max(2, Math.ceil(repos.length * 0.2));
+const maxFail = computeMaxFail(repos.length);
 if (repos.length - Object.keys(data).length > maxFail) {
   console.error(`\n❌ 失败仓库数超过阈值（>${maxFail}），中止更新以保护生产数据（--dry-run 也可用于排查）`);
   process.exit(1);
@@ -133,17 +120,13 @@ for (const m of kb.matchAll(/repo:\s*"([^"]+)"[\s\S]{0,500}?desc:\s*"((?:[^"\\\n
   kbDesc[m[1]] = m[2].replace(/\\(.)/g, "$1");
 }
 
-const now = Date.now();
-const entries = Object.entries(data)
-  .filter(([, d]) => d.pushed && (now - new Date(d.pushed)) / 86400000 <= 60)
-  .sort((a, b) => b[1].pushed.localeCompare(a[1].pushed))
-  .slice(0, 12)
-  .map(([repo, d]) => {
-    const desc = kbDesc[repo] || "";
-    const tail = `GitHub API 每日核验：最近推送 ${d.pushed}，当前星标 ${fmtStars(d.stars)}。`;
-    const text = desc ? `${jsStr(desc)}${tail}` : `项目保持活跃维护。${tail}`;
-    return `    {\n      date: "${d.pushed}",\n      repo: "${repo}",\n      label: "自动核验",\n      text: "${text}",\n    },`;
-  });
+const picks = buildPicks(Object.entries(data), kbDesc);
+const entries = picks.map(p => `    {
+      date: "${p.date}",
+      repo: "${p.repo}",
+      label: "${p.label}",
+      text: "${p.text}",
+    },`);
 
 // 护栏 2：picks 为空说明解析或数据异常，保留原有内容
 if (entries.length) {

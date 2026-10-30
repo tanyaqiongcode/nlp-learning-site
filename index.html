@@ -1308,7 +1308,13 @@ print(f"Cohen's kappa = {kappa:.2f}   （0.41–0.60 中等，0.61–0.80 强）
     <div class="footer-inner">
       <p><span class="brand-mark">🗺️</span> <strong>文科生学 NLP</strong> · 从零基础到 NLP 应用精通的个人学习地图</p>
       <p class="muted small">学习进度只保存在此浏览器的 localStorage 中，不会上传到任何服务器。想把本站放到网上？它没有任何依赖，GitHub Pages 或任意静态托管即可。</p>
-      <button class="mini-btn" id="resetProgress" type="button">重置全部学习进度</button>
+      <div class="backup-row">
+        <button class="mini-btn" id="exportProgress" type="button">⬇️ 导出进度</button>
+        <button class="mini-btn" id="importProgress" type="button">⬆️ 导入进度</button>
+        <input type="file" id="importFile" accept="application/json,.json" hidden>
+        <button class="mini-btn" id="resetProgress" type="button">重置全部学习进度</button>
+        <span id="saveStatus" class="save-status" role="status" aria-live="polite"></span>
+      </div>
     </div>
   </footer>
 

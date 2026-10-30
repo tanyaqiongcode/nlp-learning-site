@@ -18,7 +18,8 @@ const STORE = {
     } catch { return fallback; }
   },
   set(key, value) {
-    try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* 隐私模式等场景忽略 */ }
+    try { localStorage.setItem(key, JSON.stringify(value)); return true; }
+    catch { return false; } // 隐私模式 / 配额已满等场景：调用方需向用户提示保存失败
   },
 };
 

@@ -81,10 +81,11 @@ function initProgress() {
     btn.addEventListener("click", () => {
       if (progress[pid]) delete progress[pid];
       else progress[pid] = Date.now();
-      STORE.set(PROGRESS_KEY, progress);
+      const ok = STORE.set(PROGRESS_KEY, progress);
       sync();
       btn.closest(".kcard")?.classList.toggle("done", !!progress[pid]);
       refreshProgressUI();
+      flashSaveStatus(ok);
     });
     // 初始卡片状态
     if (progress[pid]) btn.closest(".kcard")?.classList.add("done");
@@ -94,12 +95,64 @@ function initProgress() {
   $("#resetProgress").addEventListener("click", () => {
     if (!confirm("确定要清空全部学习进度吗？此操作不可恢复。")) return;
     progress = {};
-    STORE.set(PROGRESS_KEY, progress);
+    flashSaveStatus(STORE.set(PROGRESS_KEY, progress));
     $$(".check-btn[data-pid]").forEach(b => {
       b.setAttribute("aria-pressed", "false");
       b.closest(".kcard")?.classList.remove("done");
     });
     refreshProgressUI();
+  });
+  initBackup();
+}
+
+/* ---------------- 保存状态提示 + 进度导入/导出 ---------------- */
+let statusTimer = null;
+function flashSaveStatus(ok) {
+  const el = $("#saveStatus");
+  if (!el) return;
+  el.textContent = ok ? "已保存 ✓" : "⚠️ 存储不可用（隐私模式或空间已满）——进度仅本次会话有效，请及时导出";
+  el.className = "save-status " + (ok ? "save-ok" : "save-warn");
+  clearTimeout(statusTimer);
+  statusTimer = setTimeout(() => { el.textContent = ""; el.className = "save-status"; }, ok ? 2000 : 12000);
+}
+
+function initBackup() {
+  $("#exportProgress").addEventListener("click", () => {
+    const payload = { app: "nlp-learning-site", key: PROGRESS_KEY, exported: new Date().toISOString(), progress };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `nlp-progress-${payload.exported.slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+    flashSaveStatus(true);
+  });
+  $("#importProgress").addEventListener("click", () => $("#importFile").click());
+  $("#importFile").addEventListener("change", e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(reader.result);
+        const p = data && data.app === "nlp-learning-site" && data.key === PROGRESS_KEY ? data.progress : null;
+        const valid = p && typeof p === "object" && Object.values(p).every(v => v === null || typeof v === "number");
+        if (!valid) throw new Error("不是本站导出的进度文件");
+        progress = Object.fromEntries(Object.entries(p).filter(([, v]) => typeof v === "number"));
+        flashSaveStatus(STORE.set(PROGRESS_KEY, progress));
+        $$(".check-btn[data-pid]").forEach(b => {
+          const on = !!progress[b.dataset.pid];
+          b.setAttribute("aria-pressed", String(on));
+          b.closest(".kcard")?.classList.toggle("done", on);
+        });
+        refreshProgressUI();
+      } catch (err) {
+        flashSaveStatus(false);
+        $("#saveStatus").textContent = "⚠️ 导入失败：不是本站导出的进度文件";
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = "";
   });
 }
 

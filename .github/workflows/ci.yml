@@ -27,6 +27,8 @@ jobs:
         run: npm run lint
       - name: 数据 schema 校验
         run: npm run validate
+      - name: 更新器单元测试
+        run: node --test scripts/update-core.test.mjs
       - name: 链接检查（本地资源 + 外链）
         run: npm run links
 
