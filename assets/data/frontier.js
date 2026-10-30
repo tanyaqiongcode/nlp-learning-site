@@ -131,15 +131,15 @@ window.FRONTIER = {
   // ---- 实时活跃度看板（自动刷新，无需手工维护）----
   live: {
     repos: [
-      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 168361, pushed: "2026-10-30" } },
-      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 122507, pushed: "2026-10-30" } },
+      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 168363, pushed: "2026-10-30" } },
+      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 122510, pushed: "2026-10-30" } },
       { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 107565, pushed: "2026-10-30" } },
       { repo: "mlabonne/llm-course", name: "LLM Course", fallback: { stars: 84797, pushed: "2026-02-05" } },
       { repo: "d2l-ai/d2l-zh", name: "动手学深度学习", fallback: { stars: 82181, pushed: "2024-07-30" } },
       { repo: "chinese-poetry/chinese-poetry", name: "chinese-poetry", fallback: { stars: 53889, pushed: "2026-06-17" } },
       { repo: "hankcs/HanLP", name: "HanLP", fallback: { stars: 36535, pushed: "2026-10-25" } },
       { repo: "EleutherAI/lm-evaluation-harness", name: "LM Eval Harness", fallback: { stars: 14350, pushed: "2026-09-14" } },
-      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 34002, pushed: "2026-10-27" } },
+      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 34003, pushed: "2026-10-27" } },
     ],
   },
 

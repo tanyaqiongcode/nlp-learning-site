@@ -24,7 +24,7 @@ window.KB = {
         {
           name: "MCP Servers 合集",
           repo: "modelcontextprotocol/servers",
-          stars: 91700, pushed: "2026-10",
+          stars: 91701, pushed: "2026-10",
           desc: "Model Context Protocol 官方服务器合集：给大模型接文件、数据库、网页等工具的标准方式。",
           why: "MCP 是 2026 年事实上的「模型连工具」标准协议（91k 星的生态规模）。想让自己的研究助手读写本地语料、调用检索，从这里的现成 Server 挑一个接上就行。",
           tags: ["免费", "官方协议", "Agent", "生态核心"],
@@ -40,7 +40,7 @@ window.KB = {
         {
           name: "Generative AI for Beginners",
           repo: "microsoft/generative-ai-for-beginners",
-          stars: 122507, pushed: "2026-10",
+          stars: 122510, pushed: "2026-10",
           desc: "微软官方 21 课生成式 AI 入门，从原理讲到应用与伦理。",
           why: "大厂官方出品、持续迭代、配有中文翻译；一课一练的结构对零基础极其友好，适合当「大模型通识课」。",
           tags: ["免费", "中文友好", "系统课程", "零基础友好"],
@@ -64,7 +64,7 @@ window.KB = {
         {
           name: "OpenAI Cookbook",
           repo: "openai/openai-cookbook",
-          stars: 76879, pushed: "2026-10",
+          stars: 76880, pushed: "2026-10",
           desc: "OpenAI 官方的 API 使用示例与实操指南合集。",
           why: "学「怎么把大模型 API 嵌进研究流程」的官方参考：批量文本标注、结构化输出、嵌入检索等任务都有现成配方。",
           tags: ["免费", "官方文档", "实操"],
@@ -120,7 +120,7 @@ window.KB = {
         {
           name: "Anthropic Courses",
           repo: "anthropics/courses",
-          stars: 22947, pushed: "2026-08",
+          stars: 22948, pushed: "2026-08",
           desc: "Anthropic 官方课程仓库：提示工程、API 实战、评测与 Agent 开发。",
           why: "大厂官方出品、持续更新、对非工程背景极友好；提示工程与「评测输出质量」两门课正对应本站的提示工程卡与评测素养专题。",
           tags: ["免费", "官方课程", "提示工程", "评测"],
@@ -136,7 +136,7 @@ window.KB = {
         {
           name: "Transformers",
           repo: "huggingface/transformers",
-          stars: 168361, pushed: "2026-10",
+          stars: 168363, pushed: "2026-10",
           desc: "Hugging Face 旗舰库：数千个预训练模型的一站式下载与使用入口。",
           why: "当今 NLP 生态的事实标准：一行代码加载 BERT/GPT 等预训练模型，本站 NLP 概念板块讲的词向量、Transformer 都能在它身上直接体验。",
           tags: ["免费", "库", "生态核心", "活跃"],
@@ -160,7 +160,7 @@ window.KB = {
         {
           name: "spaCy",
           repo: "explosion/spaCy",
-          stars: 34002, pushed: "2026-10",
+          stars: 34003, pushed: "2026-10",
           desc: "工业级自然语言处理库，速度与精度兼备。",
           why: "英文文本处理的事实标准，本站 Python 板块的示例就在用它；文档与免费互动课程（course.spacy.io）质量极高。",
           tags: ["免费", "库", "工程级"],
@@ -200,7 +200,7 @@ window.KB = {
         {
           name: "Awesome Python",
           repo: "vinta/awesome-python",
-          stars: 331380, pushed: "2026-10",
+          stars: 331383, pushed: "2026-10",
           desc: "「我想用 Python 做 X，该用哪个库」的权威答案库。",
           why: "按用途分类的库索引（文本处理、数据、爬虫……），当你需要新工具时先来这里查，避免在搜索引擎里踩坑。",
           tags: ["免费", "资源索引", "常备手册"],
@@ -208,7 +208,7 @@ window.KB = {
         {
           name: "Project-based Learning",
           repo: "practical-tutorials/project-based-learning",
-          stars: 288484, pushed: "2026-10",
+          stars: 288485, pushed: "2026-10",
           desc: "按项目组织的编程教程汇编，覆盖 Python 等多种语言。",
           why: "语法过关后最好的下一步：挑一个贴近自己研究的小项目照着做完，比再读十本书都有用。",
           tags: ["免费", "项目式学习"],
@@ -248,7 +248,7 @@ window.KB = {
         {
           name: "Neural Networks: Zero to Hero",
           repo: "karpathy/nn-zero-to-hero",
-          stars: 25094, pushed: "2024-08",
+          stars: 25097, pushed: "2024-08",
           desc: "OpenAI 创始成员 Andrej Karpathy 的手写神经网络视频课及代码。",
           why: "从自动微分一路手写到 GPT，讲解深入浅出；想建立真正的直觉而不只是调包，看这套课。",
           tags: ["免费", "视频课", "研发向"],
@@ -256,7 +256,7 @@ window.KB = {
         {
           name: "nanoGPT",
           repo: "karpathy/nanoGPT",
-          stars: 64250, pushed: "2025-11",
+          stars: 64251, pushed: "2025-11",
           desc: "最简洁的 GPT 训练 / 微调参考实现（约 300 行核心代码）。",
           why: "把 NLP 概念板块讲的 Transformer 变成能逐行读懂的代码——「教学级最小实现」的天花板，研发向面试前值得精读。",
           tags: ["免费", "代码教材", "Transformer"],
@@ -272,7 +272,7 @@ window.KB = {
         {
           name: "A2A 开放协议",
           repo: "a2aproject/A2A",
-          stars: 26357, pushed: "2026-10",
+          stars: 26359, pushed: "2026-10",
           desc: "Agent2Agent 开放协议（Google 发起，现由 Linux 基金会治理）：让不同框架的智能体互相发现、沟通与协作。",
           why: "与 MCP 互补——MCP 管「模型连工具」，A2A 管「智能体连智能体」，2026 年初 v1.0 落地。想搭多智能体研究流水线（检索→标注→审校分工协作），这是标准底座。",
           tags: ["免费", "开放标准", "Agent", "活跃"],
