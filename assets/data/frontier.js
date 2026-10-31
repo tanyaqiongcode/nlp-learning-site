@@ -9,21 +9,33 @@
       （12 小时缓存，离线/限流时回落到 fallback 数据，fallback 由脚本每日更新）。
    ============================================================ */
 window.FRONTIER = {
-  updated: "2026-10-30",
+  updated: "2026-10-31",
 
   // ---- 近期动态（最新在前）----
   picks: [
+    {
+      date: "2026-10-31",
+      repo: "microsoft/generative-ai-for-beginners",
+      label: "自动核验",
+      text: "微软官方 21 课生成式 AI 入门，从原理讲到应用与伦理。GitHub API 每日核验：最近推送 2026-10-31，当前星标 122.5k。",
+    },
+    {
+      date: "2026-10-31",
+      repo: "openai/openai-cookbook",
+      label: "自动核验",
+      text: "OpenAI 官方的 API 使用示例与实操指南合集。GitHub API 每日核验：最近推送 2026-10-31，当前星标 76.9k。",
+    },
+    {
+      date: "2026-10-31",
+      repo: "huggingface/transformers",
+      label: "自动核验",
+      text: "Hugging Face 旗舰库：数千个预训练模型的一站式下载与使用入口。GitHub API 每日核验：最近推送 2026-10-31，当前星标 168.4k。",
+    },
     {
       date: "2026-10-30",
       repo: "openai/openai-agents-python",
       label: "自动核验",
       text: "OpenAI 官方多智能体框架：用几行代码编排带工具、交接与守卫的智能体工作流。GitHub API 每日核验：最近推送 2026-10-30，当前星标 30.4k。",
-    },
-    {
-      date: "2026-10-30",
-      repo: "microsoft/generative-ai-for-beginners",
-      label: "自动核验",
-      text: "微软官方 21 课生成式 AI 入门，从原理讲到应用与伦理。GitHub API 每日核验：最近推送 2026-10-30，当前星标 122.5k。",
     },
     {
       date: "2026-10-30",
@@ -36,12 +48,6 @@ window.FRONTIER = {
       repo: "stanfordnlp/dspy",
       label: "自动核验",
       text: "斯坦福出品：把提示词工程变成「编程 + 自动优化」，用指标驱动地改进 LLM 流水线。GitHub API 每日核验：最近推送 2026-10-30，当前星标 38.9k。",
-    },
-    {
-      date: "2026-10-30",
-      repo: "huggingface/transformers",
-      label: "自动核验",
-      text: "Hugging Face 旗舰库：数千个预训练模型的一站式下载与使用入口。GitHub API 每日核验：最近推送 2026-10-30，当前星标 168.4k。",
     },
     {
       date: "2026-10-30",
@@ -78,12 +84,6 @@ window.FRONTIER = {
       repo: "modelcontextprotocol/servers",
       label: "自动核验",
       text: "Model Context Protocol 官方服务器合集：给大模型接文件、数据库、网页等工具的标准方式。GitHub API 每日核验：最近推送 2026-10-29，当前星标 91.7k。",
-    },
-    {
-      date: "2026-10-29",
-      repo: "openai/openai-cookbook",
-      label: "自动核验",
-      text: "OpenAI 官方的 API 使用示例与实操指南合集。GitHub API 每日核验：最近推送 2026-10-29，当前星标 76.9k。",
     },
   ],
 
@@ -131,15 +131,15 @@ window.FRONTIER = {
   // ---- 实时活跃度看板（自动刷新，无需手工维护）----
   live: {
     repos: [
-      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 168363, pushed: "2026-10-30" } },
-      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 122510, pushed: "2026-10-30" } },
-      { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 107565, pushed: "2026-10-30" } },
-      { repo: "mlabonne/llm-course", name: "LLM Course", fallback: { stars: 84797, pushed: "2026-02-05" } },
-      { repo: "d2l-ai/d2l-zh", name: "动手学深度学习", fallback: { stars: 82181, pushed: "2024-07-30" } },
-      { repo: "chinese-poetry/chinese-poetry", name: "chinese-poetry", fallback: { stars: 53889, pushed: "2026-06-17" } },
-      { repo: "hankcs/HanLP", name: "HanLP", fallback: { stars: 36535, pushed: "2026-10-25" } },
+      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 168383, pushed: "2026-10-31" } },
+      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 122548, pushed: "2026-10-31" } },
+      { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 107579, pushed: "2026-10-30" } },
+      { repo: "mlabonne/llm-course", name: "LLM Course", fallback: { stars: 84806, pushed: "2026-02-05" } },
+      { repo: "d2l-ai/d2l-zh", name: "动手学深度学习", fallback: { stars: 82180, pushed: "2024-07-30" } },
+      { repo: "chinese-poetry/chinese-poetry", name: "chinese-poetry", fallback: { stars: 53921, pushed: "2026-06-17" } },
+      { repo: "hankcs/HanLP", name: "HanLP", fallback: { stars: 36533, pushed: "2026-10-25" } },
       { repo: "EleutherAI/lm-evaluation-harness", name: "LM Eval Harness", fallback: { stars: 14350, pushed: "2026-09-14" } },
-      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 34003, pushed: "2026-10-27" } },
+      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 34005, pushed: "2026-10-27" } },
     ],
   },
 
