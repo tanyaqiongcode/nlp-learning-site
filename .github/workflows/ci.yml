@@ -12,7 +12,7 @@ jobs:
     name: 静态检查与数据校验
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -36,7 +36,7 @@ jobs:
     name: 浏览器冒烟测试
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -52,7 +52,7 @@ jobs:
     needs: [checks, smoke]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       # 只打包站点运行所需文件（index.html 仅引用 assets/ 下资源），
       # 不把 scripts/、.github/、package*.json 等开发文件发布到 Pages
       - name: 上传站点产物
