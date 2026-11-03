@@ -7,6 +7,8 @@
 
 **面向文科背景学习者的机器学习 / 深度学习个人学习网站。**
 
+> **English**: A zero-dependency NLP learning site for humanities students — roadmaps, a math crash course, 5 in-browser experiments (stylometry, similarity, bigram LM, Cohen's κ agreement), evaluation-literacy topics (LLM-as-a-Judge, benchmarks), and a vetted resource library with daily-updated frontier feeds.
+
 不需要先成为数学家，也不需要先成为程序员：从你熟悉的文本出发，沿着一条为语言学科研者量身定制的路线，学会用机器阅读、统计与分析语言——目标是 **3–5 个月达到研究够用水平**。
 
 ![网站截图](docs/screenshot.png)
