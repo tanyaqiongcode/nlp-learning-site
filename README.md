@@ -140,3 +140,15 @@ CI（`ci.yml`）在每次推送 / PR 时自动运行以上全部检查 + 冒烟�
 ## 📄 License
 
 [MIT](LICENSE) © 2026 tanyaqiongcode
+
+---
+
+## 相关项目
+
+- [paperlens](https://github.com/tanyaqiongcode/paperlens) — 论文查重 + AIGC 检测 + 联网核查 + 降重改写一站式平台（本地部署）
+- [paper-grader](https://github.com/tanyaqiongcode/paper-grader) — 中文学术论文 LLM 辅助批量批改（可插拔量规 + 置信度）
+- [Bilingual-Term-Extract](https://github.com/tanyaqiongcode/Bilingual-Term-Extract) — 平行文本双语术语提取（统计召回 + LLM 精筛，TBX 导出）
+- [Mini-CAT](https://github.com/tanyaqiongcode/mini-cat) — 浏览器端翻译记忆 CAT 工具（零依赖，数据不出本机）
+- [multi-align](https://github.com/tanyaqiongcode/multi-align) — 多语平行语料句对齐工作台（Gale-Church，TMX 导出）
+- [weread-shelf-organizer](https://github.com/tanyaqiongcode/weread-shelf-organizer) — 微信读书书架自动整理 Skill
+- 更多作品见 [github.com/tanyaqiongcode](https://github.com/tanyaqiongcode)
