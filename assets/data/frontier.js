@@ -9,21 +9,57 @@
       （12 小时缓存，离线/限流时回落到 fallback 数据，fallback 由脚本每日更新）。
    ============================================================ */
 window.FRONTIER = {
-  updated: "2026-11-05",
+  updated: "2026-11-06",
 
   // ---- 近期动态（最新在前）----
   picks: [
+    {
+      date: "2026-11-06",
+      repo: "openai/openai-agents-python",
+      label: "自动核验",
+      text: "OpenAI 官方多智能体框架：用几行代码编排带工具、交接与守卫的智能体工作流。GitHub API 每日核验：最近推送 2026-11-06，当前星标 30.5k。",
+    },
+    {
+      date: "2026-11-06",
+      repo: "openai/openai-cookbook",
+      label: "自动核验",
+      text: "OpenAI 官方的 API 使用示例与实操指南合集。GitHub API 每日核验：最近推送 2026-11-06，当前星标 77k。",
+    },
+    {
+      date: "2026-11-06",
+      repo: "rasbt/LLMs-from-scratch",
+      label: "自动核验",
+      text: "用 PyTorch 一步步从零实现一个类 ChatGPT 模型。GitHub API 每日核验：最近推送 2026-11-06，当前星标 107.9k。",
+    },
+    {
+      date: "2026-11-06",
+      repo: "stanfordnlp/dspy",
+      label: "自动核验",
+      text: "斯坦福出品：把提示词工程变成「编程 + 自动优化」，用指标驱动地改进 LLM 流水线。GitHub API 每日核验：最近推送 2026-11-06，当前星标 39k。",
+    },
+    {
+      date: "2026-11-06",
+      repo: "huggingface/transformers",
+      label: "自动核验",
+      text: "Hugging Face 旗舰库：数千个预训练模型的一站式下载与使用入口。GitHub API 每日核验：最近推送 2026-11-06，当前星标 168.6k。",
+    },
+    {
+      date: "2026-11-06",
+      repo: "vinta/awesome-python",
+      label: "自动核验",
+      text: "「我想用 Python 做 X，该用哪个库」的权威答案库。GitHub API 每日核验：最近推送 2026-11-06，当前星标 332.8k。",
+    },
+    {
+      date: "2026-11-06",
+      repo: "hiyouga/LlamaFactory",
+      label: "自动核验",
+      text: "一站式大模型微调工具：100+ 模型的 LoRA/全参微调与评估（ACL 2024）。GitHub API 每日核验：最近推送 2026-11-06，当前星标 75.9k。",
+    },
     {
       date: "2026-11-05",
       repo: "modelcontextprotocol/servers",
       label: "自动核验",
       text: "Model Context Protocol 官方服务器合集：给大模型接文件、数据库、网页等工具的标准方式。GitHub API 每日核验：最近推送 2026-11-05，当前星标 91.8k。",
-    },
-    {
-      date: "2026-11-05",
-      repo: "openai/openai-agents-python",
-      label: "自动核验",
-      text: "OpenAI 官方多智能体框架：用几行代码编排带工具、交接与守卫的智能体工作流。GitHub API 每日核验：最近推送 2026-11-05，当前星标 30.5k。",
     },
     {
       date: "2026-11-05",
@@ -33,27 +69,9 @@ window.FRONTIER = {
     },
     {
       date: "2026-11-05",
-      repo: "openai/openai-cookbook",
+      repo: "nltk/nltk",
       label: "自动核验",
-      text: "OpenAI 官方的 API 使用示例与实操指南合集。GitHub API 每日核验：最近推送 2026-11-05，当前星标 77k。",
-    },
-    {
-      date: "2026-11-05",
-      repo: "rasbt/LLMs-from-scratch",
-      label: "自动核验",
-      text: "用 PyTorch 一步步从零实现一个类 ChatGPT 模型。GitHub API 每日核验：最近推送 2026-11-05，当前星标 107.8k。",
-    },
-    {
-      date: "2026-11-05",
-      repo: "stanfordnlp/dspy",
-      label: "自动核验",
-      text: "斯坦福出品：把提示词工程变成「编程 + 自动优化」，用指标驱动地改进 LLM 流水线。GitHub API 每日核验：最近推送 2026-11-05，当前星标 38.9k。",
-    },
-    {
-      date: "2026-11-05",
-      repo: "huggingface/transformers",
-      label: "自动核验",
-      text: "Hugging Face 旗舰库：数千个预训练模型的一站式下载与使用入口。GitHub API 每日核验：最近推送 2026-11-05，当前星标 168.6k。",
+      text: "最经典的「为语言学家写的」NLP Python 库。GitHub API 每日核验：最近推送 2026-11-05，当前星标 14.8k。",
     },
     {
       date: "2026-11-05",
@@ -63,27 +81,9 @@ window.FRONTIER = {
     },
     {
       date: "2026-11-05",
-      repo: "vinta/awesome-python",
-      label: "自动核验",
-      text: "「我想用 Python 做 X，该用哪个库」的权威答案库。GitHub API 每日核验：最近推送 2026-11-05，当前星标 332.6k。",
-    },
-    {
-      date: "2026-11-05",
       repo: "a2aproject/A2A",
       label: "自动核验",
       text: "Agent2Agent 开放协议（Google 发起，现由 Linux 基金会治理）：让不同框架的智能体互相发现、沟通与协作。GitHub API 每日核验：最近推送 2026-11-05，当前星标 26.4k。",
-    },
-    {
-      date: "2026-11-04",
-      repo: "EleutherAI/lm-evaluation-harness",
-      label: "自动核验",
-      text: "开源大模型评测框架：数百个学术基准（MMLU、GSM8K 等）一条命令跑分。GitHub API 每日核验：最近推送 2026-11-04，当前星标 14.4k。",
-    },
-    {
-      date: "2026-11-04",
-      repo: "pytorch/tutorials",
-      label: "自动核验",
-      text: "PyTorch 官方教程集：从张量入门到分布式训练、部署的全链路。GitHub API 每日核验：最近推送 2026-11-04，当前星标 9.4k。",
     },
   ],
 
@@ -131,15 +131,15 @@ window.FRONTIER = {
   // ---- 实时活跃度看板（自动刷新，无需手工维护）----
   live: {
     repos: [
-      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 168561, pushed: "2026-11-05" } },
-      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 123009, pushed: "2026-11-05" } },
-      { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 107845, pushed: "2026-11-05" } },
-      { repo: "mlabonne/llm-course", name: "LLM Course", fallback: { stars: 84914, pushed: "2026-02-05" } },
-      { repo: "d2l-ai/d2l-zh", name: "动手学深度学习", fallback: { stars: 82272, pushed: "2024-07-30" } },
-      { repo: "chinese-poetry/chinese-poetry", name: "chinese-poetry", fallback: { stars: 54063, pushed: "2026-06-17" } },
-      { repo: "hankcs/HanLP", name: "HanLP", fallback: { stars: 36535, pushed: "2026-10-25" } },
-      { repo: "EleutherAI/lm-evaluation-harness", name: "LM Eval Harness", fallback: { stars: 14405, pushed: "2026-11-04" } },
-      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 34025, pushed: "2026-10-27" } },
+      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 168582, pushed: "2026-11-06" } },
+      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 123045, pushed: "2026-11-05" } },
+      { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 107895, pushed: "2026-11-06" } },
+      { repo: "mlabonne/llm-course", name: "LLM Course", fallback: { stars: 84926, pushed: "2026-02-05" } },
+      { repo: "d2l-ai/d2l-zh", name: "动手学深度学习", fallback: { stars: 82292, pushed: "2024-07-30" } },
+      { repo: "chinese-poetry/chinese-poetry", name: "chinese-poetry", fallback: { stars: 54077, pushed: "2026-06-17" } },
+      { repo: "hankcs/HanLP", name: "HanLP", fallback: { stars: 36539, pushed: "2026-10-25" } },
+      { repo: "EleutherAI/lm-evaluation-harness", name: "LM Eval Harness", fallback: { stars: 14410, pushed: "2026-11-04" } },
+      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 34033, pushed: "2026-10-27" } },
     ],
   },
 
