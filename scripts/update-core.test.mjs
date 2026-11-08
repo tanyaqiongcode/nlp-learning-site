@@ -39,7 +39,9 @@ test("sanitize：非法 / 无效 / 未来日期被拒（429 等异常响应不�
   assert.match(sanitize("a/b", { stars: 1, pushed: "2026-13-99" }), /无效日期|格式非法/);
   assert.match(sanitize("a/b", { stars: 1, pushed: "not-a-date" }), /格式非法/);
   assert.match(sanitize("a/b", { stars: 1, pushed: "2026/10/01" }), /格式非法/);
-  assert.match(sanitize("a/b", { stars: 1, pushed: daysAgo(-10) }), /未来日期/);
+  // 未来日期必须相对真实时钟构造（sanitize 内部用 Date.now() 判断）
+  const future = new Date(Date.now() + 10 * 86400000).toISOString().slice(0, 10);
+  assert.match(sanitize("a/b", { stars: 1, pushed: future }), /未来日期/);
 });
 
 test("computeMaxFail：max(2, 20%) 阈值", () => {
