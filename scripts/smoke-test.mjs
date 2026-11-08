@@ -35,7 +35,7 @@ await page.addInitScript(() => {
 await page.goto(`${base}/index.html`, { waitUntil: "domcontentloaded" });
 await page.waitForTimeout(400);
 check("首页标题", (await page.title()).includes("文科生学 NLP"));
-check("导航 9 项", await page.locator(".nav-link").count() === 9);
+check("导航 10 项", await page.locator(".nav-link").count() === 10);
 check("首页有整体进度框", await page.locator("#overallNum").isVisible());
 check("无 JS 页面错误(首页)", pageErrors.length === 0, pageErrors.join("; "));
 

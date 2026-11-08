@@ -131,6 +131,7 @@ window.FRONTIER = {
   // ---- 实时活跃度看板（自动刷新，无需手工维护）----
   live: {
     repos: [
+      { repo: "morluto/rea", name: "REA", fallback: { stars: 441451, pushed: "2026-11-08" } },
       { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 168483, pushed: "2026-11-03" } },
       { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 122888, pushed: "2026-11-02" } },
       { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 107734, pushed: "2026-10-30" } },

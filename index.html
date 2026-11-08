@@ -23,6 +23,7 @@
         <a class="nav-link" href="#/projects">实操项目</a>
         <a class="nav-link" href="#/kb">知识库</a>
         <a class="nav-link" href="#/frontier">前沿动态</a>
+        <a class="nav-link" href="#/notes">实验笔记</a>
         <a class="nav-link" href="#/resources">书单资源</a>
       </nav>
       <div class="topbar-actions">
@@ -95,6 +96,13 @@
               <h3>实操项目</h3>
               <p>浏览器里直接运行五个实验：文体计量、文本相似度、语言模型接龙、标注一致性、语料统计。</p>
               <div class="progress"><div class="bar-track"><div class="bar-fill" data-module-progress="projects"></div></div><span class="progress-num" data-module-progress="projects"></span></div>
+            </div>
+          </a>
+          <a class="mod-card" href="#/notes">
+            <span class="mod-icon">📝</span>
+            <div class="mod-body">
+              <h3>实验笔记</h3>
+              <p>案例拆解：拆解 REA——agent 的「逆向」能力是怎么被接出来的。</p>
             </div>
           </a>
           <a class="mod-card" href="#/kb">
@@ -1299,6 +1307,53 @@ print(f"Cohen's kappa = {kappa:.2f}   （0.41–0.60 中等，0.61–0.80 强）
         <div class="callout c-info">
           <strong>🤖 压轴资源 · AI 助教</strong>
           遇到看不懂的报错、读不下去的论文段落，直接问 ChatGPT / Claude，并附一句"请解释给文科背景的读者听"。这是当代自学者最大的外挂——但记得按 NLP 概念板块的"幻觉守则"核查它说的话，评测它的输出质量，正是你在评测素养专题学到的第一课。
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 实验笔记 ================= -->
+    <section class="page" id="page-notes">
+      <div class="container">
+        <header class="page-head">
+          <span class="crumb">实验笔记 · 案例拆解</span>
+          <h2>拆解 REA：agent 是怎么获得「逆向」能力的</h2>
+          <p class="lede">一篇来自评测视角的实验笔记。对象是 <a href="https://github.com/morluto/rea" target="_blank" rel="noopener">morluto/rea</a>——一个 44 万星、2026 年最热的 agent 项目。它回答了一个比「MCP 是什么」重要得多的问题：<strong>模型不会的事情，是怎么被接出来的？</strong></p>
+          <div class="head-meta">
+            <span class="chip">笔记日期 2026-11-08</span>
+            <span class="chip">阅读约 6 分钟</span>
+            <span class="chip">关联：评测素养 · MCP · Agent</span>
+          </div>
+        </header>
+
+        <div class="note-body prose">
+          <h3>先说结论</h3>
+          <p>REA（<em>Reverse Engineer Anything</em>）让 Claude Code、Codex、Cursor 这类 agent 能够「逆向任何东西」——从 App 的某项功能，一路拆到原生二进制。但它的 <a href="https://github.com/morluto/rea" target="_blank" rel="noopener">441k 星</a>没有一行是在训练模型：<strong>agent 的「逆向能力」不是练出来的，是接出来的。</strong>拆完它的仓库，能力来自三层叠加，每一层都值得单独看。</p>
+
+          <h3>第一层：一个精心设计的「工具目录」</h3>
+          <p>REA 的本体是一个 MCP 服务器，注册了 <strong>40+ 个以 <code>inspect_</code> 开头的工具</strong>——从 PE 导入表、ELF 笔记、二进制加固标记（PIE/NX/RELRO），到 WASM 反汇编、EVM 字节码、GGUF 模型文件头、Unity IL2CPP 元数据、SQLite 快照、HAR 网络抓包……覆盖「你能想逆向的一切」。</p>
+          <p>工具设计的两个细节很值得抄：① 命名极其规整（<code>inspect_apk_signature</code>、<code>inspect_wasm_artifact</code>），agent 不需要额外解释就能对号入座；② <strong>输入 schema 默认「紧凑档」</strong>——只保留最小字段，需要完整校验说明时再切 <code>full</code>。原因写在它们的 contracts 文档里：省 context。一个 40 工具的目录如果每个都挂全套 JSON Schema，还没干活就把上下文吃光了。</p>
+
+          <h3>第二层：REA 自己不「会」逆向——它调度专业引擎</h3>
+          <p>反编译怎么做？REA 的答案是：<strong>不自己做。</strong>原生二进制交给 Hopper / Ghidra / IDA / Kuna（用户已装的引擎，REA 通过桥接驱动它们，必要时可代装 Hopper）；安卓交给 JADX / JEB / Apktool；固件交给 Binwalk / Unblob；网络包交给 tshark；甚至离线分析还可以调用你自备的 objdump、Rizin、pwntools。很多格式检查则内置实现（模型文件头、PE 证书、ELF 笔记这类「读结构」的活不需要外部引擎）。</p>
+          <p>这一层揭示的分工是：<strong>专业引擎负责「深」，agent 负责「广 + 编排」。</strong>引擎把二进制变成结构化事实（伪代码、符号、调用图），REA 把事实连同出处打包成 agent 能用的结果，agent 再决定下一步问什么。工具链的每一个环节都只做一件事。</p>
+
+          <h3>第三层：写进 agent 脑子里的「工作流指令」</h3>
+          <p><code>npx rea-agents setup</code> 做两件事：注册 MCP 服务器，<strong>并把配套的工作流指令（skill）写进 agent</strong>——仓库的 <code>.agents/skills/</code> 里就放着 <code>reverse-engineer-anything</code> 等五个技能文件，还有 Claude Code / Codex 插件清单。这一步才是「能力涌现」的点睛之笔：同一个工具集，配上「先看哪、怎么取证、何时换引擎、怎么汇报」的指令，效果完全不同。</p>
+
+          <h3>评测视角最值得学的一点：每个结论都自带证据链</h3>
+          <p>README 里反复强调：分析结果<strong>附带证据与局限</strong>（evidence and limitations），且全部本地运行。对照我们在评测素养专题学过的框架——这就是把「可验证性」做进了产品：agent 说「这个功能是 X 实现的」，你可以追问证据、自己去复核，甚至知道哪些结论是引擎能力边界之外的猜测。<strong>让模型的结论可被检验，比让结论更流畅重要得多。</strong></p>
+
+          <h3>给你的三个 takeaway</h3>
+          <ol>
+            <li><strong>判断一个 agent 产品的真实能力，先看它的工具目录和工作流指令</strong>——而不是看模型叫什么名字。目录设计（命名、schema 档位、context 预算）直接决定上限。</li>
+            <li><strong>「编排专业工具」胜过「自己重造」</strong>。REA 44 万星的核心不是代码量，而是把五十年逆向工程生态接成了 agent 可用的形态——你的研究流程里也一定有类似的「专业工具」值得这样接。</li>
+            <li><strong>证据链是评测的接口</strong>。想评测一个 agent 系统？先看它是否强制输出 evidence / limitations——REA 在这点上是行业样板。</li>
+          </ol>
+
+          <div class="callout c-info">
+            <strong>🔗 动手环节</strong>
+            ① 浏览 <a href="https://github.com/morluto/rea" target="_blank" rel="noopener">morluto/rea</a> 的 README「What you can analyze」表格，数一数有多少个 <code>inspect_</code> 工具、多少个「内置 / caller-supplied 引擎」；② 读 <a href="https://github.com/morluto/rea/blob/main/docs/reference/mcp-contracts.md" target="_blank" rel="noopener">mcp-contracts.md</a> 的 compact schema 一节，想想 context 预算怎么省；③ 对照本站资源库里的「MCP Servers 合集」，写出 REA 与通用 MCP 的三点不同——发到你的研究笔记里。
+          </div>
         </div>
       </div>
     </section>

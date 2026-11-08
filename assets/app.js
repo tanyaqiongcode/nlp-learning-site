@@ -19,6 +19,7 @@ const PAGES = [
   { id: "projects", title: "实操项目" },
   { id: "kb", title: "资源知识库" },
   { id: "frontier", title: "前沿动态" },
+  { id: "notes", title: "实验笔记" },
   { id: "resources", title: "书单与资源" },
 ];
 

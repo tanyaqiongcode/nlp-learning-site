@@ -14,6 +14,14 @@ window.KB = {
       desc: "从提示词到智能体：把大模型真正用起来的第一手资源，应用向第五个月之后的最佳进阶。",
       items: [
         {
+          name: "REA · Reverse Engineer Anything",
+          repo: "morluto/rea",
+          stars: 441451, pushed: "2026-11",
+          desc: "现象级 agent 项目：一个 MCP + 一套 skill，让 agent 逆向从 App 行为到原生二进制的一切。",
+          why: "研究「agent 能力怎么被接出来」的最佳标本：40+ 个 inspect_ 工具目录、调度 Hopper/Ghidra/JADX 等专业引擎、每个结论自带证据与局限——本站实验笔记有整篇拆解。",
+          tags: ["免费", "Agent", "MCP", "44万星", "实验笔记配套"],
+        },
+        {
           name: "OpenAI Agents SDK",
           repo: "openai/openai-agents-python",
           stars: 30471, pushed: "2026-11",
