@@ -17,7 +17,7 @@ window.FRONTIER = {
       date: "2026-11-08",
       repo: "morluto/rea",
       label: "自动核验",
-      text: "现象级 agent 项目：一个 MCP + 一套 skill，让 agent 逆向从 App 行为到原生二进制的一切。GitHub API 每日核验：最近推送 2026-11-08，当前星标 441.5k。",
+      text: "现象级 agent 项目：一个 MCP + 一套 skill，让 agent 逆向从 App 行为到原生二进制的一切。GitHub API 每日核验：最近推送 2026-11-08，当前星标 441.9k。",
     },
     {
       date: "2026-11-08",
@@ -131,16 +131,16 @@ window.FRONTIER = {
   // ---- 实时活跃度看板（自动刷新，无需手工维护）----
   live: {
     repos: [
-      { repo: "morluto/rea", name: "REA", fallback: { stars: 441471, pushed: "2026-11-08" } },
-      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 168638, pushed: "2026-11-08" } },
-      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 123111, pushed: "2026-11-05" } },
-      { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 107985, pushed: "2026-11-06" } },
-      { repo: "mlabonne/llm-course", name: "LLM Course", fallback: { stars: 84946, pushed: "2026-02-05" } },
-      { repo: "d2l-ai/d2l-zh", name: "动手学深度学习", fallback: { stars: 82328, pushed: "2024-07-30" } },
-      { repo: "chinese-poetry/chinese-poetry", name: "chinese-poetry", fallback: { stars: 54100, pushed: "2026-06-17" } },
-      { repo: "hankcs/HanLP", name: "HanLP", fallback: { stars: 36535, pushed: "2026-11-07" } },
+      { repo: "morluto/rea", name: "REA", fallback: { stars: 441931, pushed: "2026-11-08" } },
+      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 168643, pushed: "2026-11-08" } },
+      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 123116, pushed: "2026-11-05" } },
+      { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 107991, pushed: "2026-11-06" } },
+      { repo: "mlabonne/llm-course", name: "LLM Course", fallback: { stars: 84948, pushed: "2026-02-05" } },
+      { repo: "d2l-ai/d2l-zh", name: "动手学深度学习", fallback: { stars: 82331, pushed: "2024-07-30" } },
+      { repo: "chinese-poetry/chinese-poetry", name: "chinese-poetry", fallback: { stars: 54103, pushed: "2026-06-17" } },
+      { repo: "hankcs/HanLP", name: "HanLP", fallback: { stars: 36537, pushed: "2026-11-07" } },
       { repo: "EleutherAI/lm-evaluation-harness", name: "LM Eval Harness", fallback: { stars: 14424, pushed: "2026-11-04" } },
-      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 34038, pushed: "2026-10-27" } },
+      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 34037, pushed: "2026-10-27" } },
     ],
   },
 
