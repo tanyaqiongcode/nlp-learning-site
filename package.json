@@ -17,7 +17,7 @@
     "eslint": "^10.14.0",
     "globals": "^17.13.0",
     "htmlhint": "^1.9.2",
-    "playwright": "^1.64.1"
+    "playwright": "^1.65.0"
   },
   "engines": {
     "node": ">=20.19.0"
