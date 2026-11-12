@@ -9,45 +9,63 @@
       （12 小时缓存，离线/限流时回落到 fallback 数据，fallback 由脚本每日更新）。
    ============================================================ */
 window.FRONTIER = {
-  updated: "2026-11-11",
+  updated: "2026-11-12",
 
   // ---- 近期动态（最新在前）----
   picks: [
     {
-      date: "2026-11-11",
+      date: "2026-11-12",
       repo: "morluto/rea",
       label: "自动核验",
-      text: "现象级 agent 项目：一个 MCP + 一套 skill，让 agent 逆向从 App 行为到原生二进制的一切。GitHub API 每日核验：最近推送 2026-11-11，当前星标 451.1k。",
+      text: "现象级 agent 项目：一个 MCP + 一套 skill，让 agent 逆向从 App 行为到原生二进制的一切。GitHub API 每日核验：最近推送 2026-11-12，当前星标 453.8k。",
     },
     {
-      date: "2026-11-11",
-      repo: "openai/openai-agents-python",
-      label: "自动核验",
-      text: "OpenAI 官方多智能体框架：用几行代码编排带工具、交接与守卫的智能体工作流。GitHub API 每日核验：最近推送 2026-11-11，当前星标 30.6k。",
-    },
-    {
-      date: "2026-11-11",
+      date: "2026-11-12",
       repo: "modelcontextprotocol/servers",
       label: "自动核验",
-      text: "Model Context Protocol 官方服务器合集：给大模型接文件、数据库、网页等工具的标准方式。GitHub API 每日核验：最近推送 2026-11-11，当前星标 91.9k。",
+      text: "Model Context Protocol 官方服务器合集：给大模型接文件、数据库、网页等工具的标准方式。GitHub API 每日核验：最近推送 2026-11-12，当前星标 91.9k。",
+    },
+    {
+      date: "2026-11-12",
+      repo: "openai/openai-agents-python",
+      label: "自动核验",
+      text: "OpenAI 官方多智能体框架：用几行代码编排带工具、交接与守卫的智能体工作流。GitHub API 每日核验：最近推送 2026-11-12，当前星标 30.6k。",
+    },
+    {
+      date: "2026-11-12",
+      repo: "microsoft/generative-ai-for-beginners",
+      label: "自动核验",
+      text: "微软官方 21 课生成式 AI 入门，从原理讲到应用与伦理。GitHub API 每日核验：最近推送 2026-11-12，当前星标 123.4k。",
+    },
+    {
+      date: "2026-11-12",
+      repo: "openai/openai-cookbook",
+      label: "自动核验",
+      text: "OpenAI 官方的 API 使用示例与实操指南合集。GitHub API 每日核验：最近推送 2026-11-12，当前星标 77.1k。",
+    },
+    {
+      date: "2026-11-12",
+      repo: "huggingface/transformers",
+      label: "自动核验",
+      text: "Hugging Face 旗舰库：数千个预训练模型的一站式下载与使用入口。GitHub API 每日核验：最近推送 2026-11-12，当前星标 168.9k。",
+    },
+    {
+      date: "2026-11-12",
+      repo: "stanfordnlp/stanza",
+      label: "自动核验",
+      text: "斯坦福官方多语言 NLP 工具包，支持 70+ 种语言。GitHub API 每日核验：最近推送 2026-11-12，当前星标 7.9k。",
     },
     {
       date: "2026-11-11",
-      repo: "huggingface/transformers",
+      repo: "stanfordnlp/dspy",
       label: "自动核验",
-      text: "Hugging Face 旗舰库：数千个预训练模型的一站式下载与使用入口。GitHub API 每日核验：最近推送 2026-11-11，当前星标 168.8k。",
+      text: "斯坦福出品：把提示词工程变成「编程 + 自动优化」，用指标驱动地改进 LLM 流水线。GitHub API 每日核验：最近推送 2026-11-11，当前星标 39k。",
     },
     {
       date: "2026-11-11",
       repo: "nltk/nltk",
       label: "自动核验",
       text: "最经典的「为语言学家写的」NLP Python 库。GitHub API 每日核验：最近推送 2026-11-11，当前星标 14.8k。",
-    },
-    {
-      date: "2026-11-11",
-      repo: "stanfordnlp/stanza",
-      label: "自动核验",
-      text: "斯坦福官方多语言 NLP 工具包，支持 70+ 种语言。GitHub API 每日核验：最近推送 2026-11-11，当前星标 7.9k。",
     },
     {
       date: "2026-11-11",
@@ -63,27 +81,9 @@ window.FRONTIER = {
     },
     {
       date: "2026-11-11",
-      repo: "programminghistorian/jekyll",
-      label: "自动核验",
-      text: "人文学者写给同行的编程教程集（本仓库为站点源码）。GitHub API 每日核验：最近推送 2026-11-11，当前星标 557。",
-    },
-    {
-      date: "2026-11-11",
       repo: "dh-tech/awesome-digital-humanities",
       label: "自动核验",
-      text: "数字人文领域的工具、资源与服务总清单。GitHub API 每日核验：最近推送 2026-11-11，当前星标 429。",
-    },
-    {
-      date: "2026-11-11",
-      repo: "maehr/awesome-digital-history",
-      label: "自动核验",
-      text: "数字史学的史料库与学习方法索引。GitHub API 每日核验：最近推送 2026-11-11，当前星标 366。",
-    },
-    {
-      date: "2026-11-10",
-      repo: "openai/openai-cookbook",
-      label: "自动核验",
-      text: "OpenAI 官方的 API 使用示例与实操指南合集。GitHub API 每日核验：最近推送 2026-11-10，当前星标 77k。",
+      text: "数字人文领域的工具、资源与服务总清单。GitHub API 每日核验：最近推送 2026-11-11，当前星标 430。",
     },
   ],
 
@@ -131,16 +131,16 @@ window.FRONTIER = {
   // ---- 实时活跃度看板（自动刷新，无需手工维护）----
   live: {
     repos: [
-      { repo: "morluto/rea", name: "REA", fallback: { stars: 451136, pushed: "2026-11-11" } },
-      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 168797, pushed: "2026-11-11" } },
-      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 123336, pushed: "2026-11-05" } },
-      { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 108220, pushed: "2026-11-09" } },
-      { repo: "mlabonne/llm-course", name: "LLM Course", fallback: { stars: 85048, pushed: "2026-02-05" } },
-      { repo: "d2l-ai/d2l-zh", name: "动手学深度学习", fallback: { stars: 82462, pushed: "2024-07-30" } },
-      { repo: "chinese-poetry/chinese-poetry", name: "chinese-poetry", fallback: { stars: 54280, pushed: "2026-06-17" } },
-      { repo: "hankcs/HanLP", name: "HanLP", fallback: { stars: 36537, pushed: "2026-11-07" } },
-      { repo: "EleutherAI/lm-evaluation-harness", name: "LM Eval Harness", fallback: { stars: 14450, pushed: "2026-11-04" } },
-      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 34041, pushed: "2026-10-27" } },
+      { repo: "morluto/rea", name: "REA", fallback: { stars: 453821, pushed: "2026-11-12" } },
+      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 168892, pushed: "2026-11-12" } },
+      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 123393, pushed: "2026-11-12" } },
+      { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 108277, pushed: "2026-11-09" } },
+      { repo: "mlabonne/llm-course", name: "LLM Course", fallback: { stars: 85066, pushed: "2026-02-05" } },
+      { repo: "d2l-ai/d2l-zh", name: "动手学深度学习", fallback: { stars: 82492, pushed: "2024-07-30" } },
+      { repo: "chinese-poetry/chinese-poetry", name: "chinese-poetry", fallback: { stars: 54320, pushed: "2026-06-17" } },
+      { repo: "hankcs/HanLP", name: "HanLP", fallback: { stars: 36535, pushed: "2026-11-07" } },
+      { repo: "EleutherAI/lm-evaluation-harness", name: "LM Eval Harness", fallback: { stars: 14458, pushed: "2026-11-04" } },
+      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 34045, pushed: "2026-10-27" } },
     ],
   },
 
