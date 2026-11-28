@@ -9,15 +9,45 @@
       （12 小时缓存，离线/限流时回落到 fallback 数据，fallback 由脚本每日更新）。
    ============================================================ */
 window.FRONTIER = {
-  updated: "2026-11-27",
+  updated: "2026-11-28",
 
   // ---- 近期动态（最新在前）----
   picks: [
     {
-      date: "2026-11-27",
+      date: "2026-11-28",
       repo: "morluto/rea",
       label: "自动核验",
-      text: "现象级 agent 项目：一个 MCP + 一套 skill，让 agent 逆向从 App 行为到原生二进制的一切。GitHub API 每日核验：最近推送 2026-11-27，当前星标 480.4k。",
+      text: "现象级 agent 项目：一个 MCP + 一套 skill，让 agent 逆向从 App 行为到原生二进制的一切。GitHub API 每日核验：最近推送 2026-11-28，当前星标 481.6k。",
+    },
+    {
+      date: "2026-11-28",
+      repo: "openai/openai-agents-python",
+      label: "自动核验",
+      text: "OpenAI 官方多智能体框架：用几行代码编排带工具、交接与守卫的智能体工作流。GitHub API 每日核验：最近推送 2026-11-28，当前星标 30.9k。",
+    },
+    {
+      date: "2026-11-28",
+      repo: "huggingface/transformers",
+      label: "自动核验",
+      text: "Hugging Face 旗舰库：数千个预训练模型的一站式下载与使用入口。GitHub API 每日核验：最近推送 2026-11-28，当前星标 169.3k。",
+    },
+    {
+      date: "2026-11-28",
+      repo: "nltk/nltk",
+      label: "自动核验",
+      text: "最经典的「为语言学家写的」NLP Python 库。GitHub API 每日核验：最近推送 2026-11-28，当前星标 14.8k。",
+    },
+    {
+      date: "2026-11-28",
+      repo: "vinta/awesome-python",
+      label: "自动核验",
+      text: "「我想用 Python 做 X，该用哪个库」的权威答案库。GitHub API 每日核验：最近推送 2026-11-28，当前星标 337.6k。",
+    },
+    {
+      date: "2026-11-28",
+      repo: "hiyouga/LlamaFactory",
+      label: "自动核验",
+      text: "一站式大模型微调工具：100+ 模型的 LoRA/全参微调与评估（ACL 2024）。GitHub API 每日核验：最近推送 2026-11-28，当前星标 76.3k。",
     },
     {
       date: "2026-11-27",
@@ -27,63 +57,33 @@ window.FRONTIER = {
     },
     {
       date: "2026-11-27",
-      repo: "openai/openai-agents-python",
-      label: "自动核验",
-      text: "OpenAI 官方多智能体框架：用几行代码编排带工具、交接与守卫的智能体工作流。GitHub API 每日核验：最近推送 2026-11-27，当前星标 30.9k。",
-    },
-    {
-      date: "2026-11-27",
-      repo: "huggingface/transformers",
-      label: "自动核验",
-      text: "Hugging Face 旗舰库：数千个预训练模型的一站式下载与使用入口。GitHub API 每日核验：最近推送 2026-11-27，当前星标 169.4k。",
-    },
-    {
-      date: "2026-11-27",
       repo: "stanfordnlp/stanza",
       label: "自动核验",
       text: "斯坦福官方多语言 NLP 工具包，支持 70+ 种语言。GitHub API 每日核验：最近推送 2026-11-27，当前星标 7.9k。",
     },
     {
+      date: "2026-11-27",
+      repo: "a2aproject/A2A",
+      label: "自动核验",
+      text: "Agent2Agent 开放协议（Google 发起，现由 Linux 基金会治理）：让不同框架的智能体互相发现、沟通与协作。GitHub API 每日核验：最近推送 2026-11-27，当前星标 26.7k。",
+    },
+    {
+      date: "2026-11-27",
+      repo: "awesomedata/awesome-public-datasets",
+      label: "自动核验",
+      text: "按 25+ 学科整理的高质量公开数据集总表。GitHub API 每日核验：最近推送 2026-11-27，当前星标 80.5k。",
+    },
+    {
       date: "2026-11-26",
       repo: "microsoft/generative-ai-for-beginners",
       label: "自动核验",
-      text: "微软官方 21 课生成式 AI 入门，从原理讲到应用与伦理。GitHub API 每日核验：最近推送 2026-11-26，当前星标 124.4k。",
+      text: "微软官方 21 课生成式 AI 入门，从原理讲到应用与伦理。GitHub API 每日核验：最近推送 2026-11-26，当前星标 124.5k。",
     },
     {
       date: "2026-11-26",
       repo: "rasbt/LLMs-from-scratch",
       label: "自动核验",
-      text: "用 PyTorch 一步步从零实现一个类 ChatGPT 模型。GitHub API 每日核验：最近推送 2026-11-26，当前星标 109.1k。",
-    },
-    {
-      date: "2026-11-26",
-      repo: "programminghistorian/jekyll",
-      label: "自动核验",
-      text: "人文学者写给同行的编程教程集（本仓库为站点源码）。GitHub API 每日核验：最近推送 2026-11-26，当前星标 559。",
-    },
-    {
-      date: "2026-11-26",
-      repo: "awesomedata/awesome-public-datasets",
-      label: "自动核验",
-      text: "按 25+ 学科整理的高质量公开数据集总表。GitHub API 每日核验：最近推送 2026-11-26，当前星标 80.5k。",
-    },
-    {
-      date: "2026-11-25",
-      repo: "openai/openai-cookbook",
-      label: "自动核验",
-      text: "OpenAI 官方的 API 使用示例与实操指南合集。GitHub API 每日核验：最近推送 2026-11-25，当前星标 77.5k。",
-    },
-    {
-      date: "2026-11-25",
-      repo: "stanfordnlp/dspy",
-      label: "自动核验",
-      text: "斯坦福出品：把提示词工程变成「编程 + 自动优化」，用指标驱动地改进 LLM 流水线。GitHub API 每日核验：最近推送 2026-11-25，当前星标 39.3k。",
-    },
-    {
-      date: "2026-11-25",
-      repo: "a2aproject/A2A",
-      label: "自动核验",
-      text: "Agent2Agent 开放协议（Google 发起，现由 Linux 基金会治理）：让不同框架的智能体互相发现、沟通与协作。GitHub API 每日核验：最近推送 2026-11-25，当前星标 26.7k。",
+      text: "用 PyTorch 一步步从零实现一个类 ChatGPT 模型。GitHub API 每日核验：最近推送 2026-11-26，当前星标 109.2k。",
     },
   ],
 
@@ -131,16 +131,16 @@ window.FRONTIER = {
   // ---- 实时活跃度看板（自动刷新，无需手工维护）----
   live: {
     repos: [
-      { repo: "morluto/rea", name: "REA", fallback: { stars: 480429, pushed: "2026-11-27" } },
-      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 169398, pushed: "2026-11-27" } },
-      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 124386, pushed: "2026-11-26" } },
-      { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 109118, pushed: "2026-11-26" } },
-      { repo: "mlabonne/llm-course", name: "LLM Course", fallback: { stars: 85281, pushed: "2026-02-05" } },
-      { repo: "d2l-ai/d2l-zh", name: "动手学深度学习", fallback: { stars: 82772, pushed: "2024-07-30" } },
-      { repo: "chinese-poetry/chinese-poetry", name: "chinese-poetry", fallback: { stars: 54589, pushed: "2026-06-17" } },
+      { repo: "morluto/rea", name: "REA", fallback: { stars: 481577, pushed: "2026-11-28" } },
+      { repo: "huggingface/transformers", name: "Transformers", fallback: { stars: 169327, pushed: "2026-11-28" } },
+      { repo: "microsoft/generative-ai-for-beginners", name: "GenAI for Beginners", fallback: { stars: 124460, pushed: "2026-11-26" } },
+      { repo: "rasbt/LLMs-from-scratch", name: "LLMs from Scratch", fallback: { stars: 109175, pushed: "2026-11-26" } },
+      { repo: "mlabonne/llm-course", name: "LLM Course", fallback: { stars: 85308, pushed: "2026-02-05" } },
+      { repo: "d2l-ai/d2l-zh", name: "动手学深度学习", fallback: { stars: 82787, pushed: "2024-07-30" } },
+      { repo: "chinese-poetry/chinese-poetry", name: "chinese-poetry", fallback: { stars: 54601, pushed: "2026-06-17" } },
       { repo: "hankcs/HanLP", name: "HanLP", fallback: { stars: 36543, pushed: "2026-11-07" } },
-      { repo: "EleutherAI/lm-evaluation-harness", name: "LM Eval Harness", fallback: { stars: 14547, pushed: "2026-11-04" } },
-      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 34094, pushed: "2026-11-21" } },
+      { repo: "EleutherAI/lm-evaluation-harness", name: "LM Eval Harness", fallback: { stars: 14550, pushed: "2026-11-04" } },
+      { repo: "explosion/spaCy", name: "spaCy", fallback: { stars: 34097, pushed: "2026-11-21" } },
     ],
   },
 
